@@ -1,0 +1,12 @@
+test_type,metric,value
+missing_values,handled,True
+missing_values,best_strategy,mean
+missing_values,rmse_degradation,0.26098369407035626
+missing_values,missing_percentage_tested,15.0
+outliers,5.0%,1.2767894894224412
+outliers,10.0%,1.9076888407134742
+outliers,15.0%,2.7682683662099468
+noise_sensitivity,noise_0.01,0.20564477236815826
+noise_sensitivity,noise_0.05,0.2583192562104468
+noise_sensitivity,noise_0.1,0.4380354509103537
+noise_sensitivity,noise_0.2,0.8446293796742737

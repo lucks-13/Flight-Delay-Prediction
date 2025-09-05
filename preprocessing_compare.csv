@@ -1,0 +1,6 @@
+preprocessing,best_model,best_cv_score,model_count
+standard,ridge,206.9473208575678,12
+minmax,random_forest,174.19548112438517,12
+robust,ridge,137.58055906237306,12
+power,bagging,157.54860511283346,12
+quantile,ada_boost,193.96673532981657,12

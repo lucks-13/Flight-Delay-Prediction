@@ -1,0 +1,29 @@
+OPTIMIZED MODEL PARAMETERS
+==============================
+
+RANDOMFOREST
+------------
+n_estimators: 150
+min_samples_split: 10
+max_features: 0.5
+max_depth: None
+CV Score: 74.956835
+Test RMSE: 8.467644
+
+GRADIENTBOOSTING
+----------------
+n_estimators: 100
+max_depth: 3
+learning_rate: 0.2
+CV Score: 68.490776
+Test RMSE: 8.132742
+
+XGBOOST
+-------
+subsample: 0.8
+n_estimators: 100
+max_depth: 3
+learning_rate: 0.2
+CV Score: 69.188815
+Test RMSE: 8.140499
+

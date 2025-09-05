@@ -1,0 +1,4 @@
+,best_params,best_cv_score,test_rmse,test_r2
+RandomForest,"{'n_estimators': 150, 'min_samples_split': 10, 'max_features': 0.5, 'max_depth': None}",74.95683467886913,8.467643723493929,0.7297820862401012
+GradientBoosting,"{'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.2}",68.49077624889033,8.132741918738688,0.7507340458518916
+XGBoost,"{'subsample': 0.8, 'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.2}",69.18881523504892,8.140498802856156,0.7502583270293112

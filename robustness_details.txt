@@ -1,0 +1,22 @@
+ROBUSTNESS ANALYSIS DETAILS
+==============================
+
+MISSING VALUES ROBUSTNESS
+-------------------------
+handled: True
+best_strategy: mean
+rmse_degradation: 0.26098369407035626
+missing_percentage_tested: 15.0
+
+OUTLIER SENSITIVITY
+------------------
+Outliers 5.0%: RMSE degradation = 1.276789
+Outliers 10.0%: RMSE degradation = 1.907689
+Outliers 15.0%: RMSE degradation = 2.768268
+
+NOISE SENSITIVITY
+----------------
+noise_0.01: RMSE degradation = 0.205645
+noise_0.05: RMSE degradation = 0.258319
+noise_0.1: RMSE degradation = 0.438035
+noise_0.2: RMSE degradation = 0.844629

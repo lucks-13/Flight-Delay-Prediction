@@ -1,0 +1,169 @@
+DETAILED ANALYSIS RESULTS
+========================================
+
+COMPREHENSIVE MODEL EVALUATION
+-----------------------------------
+
+LINEAR_REGRESSION
+Train RMSE: 26.839054
+Test RMSE: 26.880179
+Train MAE: 22.512408
+Test MAE: 22.633199
+Train R²: -1.741356
+Test R²: -1.723035
+Overfitting: -0.041125
+
+RIDGE
+Train RMSE: 15.942759
+Test RMSE: 16.309631
+Train MAE: 12.561202
+Test MAE: 12.849928
+Train R²: 0.032707
+Test R²: -0.002484
+Overfitting: -0.366872
+
+LASSO
+Train RMSE: 16.109470
+Test RMSE: 16.405844
+Train MAE: 12.736776
+Test MAE: 12.986322
+Train R²: 0.012372
+Test R²: -0.014346
+Overfitting: -0.296374
+
+ELASTIC_NET
+Train RMSE: 14.744112
+Test RMSE: 15.077966
+Train MAE: 11.716641
+Test MAE: 11.958839
+Train R²: 0.172690
+Test R²: 0.143210
+Overfitting: -0.333854
+
+DECISION_TREE
+Train RMSE: 20.353856
+Test RMSE: 20.524213
+Train MAE: 16.157131
+Test MAE: 16.363768
+Train R²: -0.576611
+Test R²: -0.587530
+Overfitting: -0.170357
+
+RANDOM_FOREST
+Train RMSE: 16.177726
+Test RMSE: 16.260838
+Train MAE: 12.700681
+Test MAE: 12.802780
+Train R²: 0.003985
+Test R²: 0.003506
+Overfitting: -0.083112
+
+GRADIENT_BOOSTING
+Train RMSE: 17.641343
+Test RMSE: 17.726730
+Train MAE: 13.875819
+Test MAE: 13.981784
+Train R²: -0.184389
+Test R²: -0.184258
+Overfitting: -0.085387
+
+ADA_BOOST
+Train RMSE: 16.659372
+Test RMSE: 16.725802
+Train MAE: 13.104635
+Test MAE: 13.192689
+Train R²: -0.056205
+Test R²: -0.054297
+Overfitting: -0.066429
+
+SVR
+Train RMSE: 15.920954
+Test RMSE: 15.992516
+Train MAE: 12.654152
+Test MAE: 12.725113
+Train R²: 0.035351
+Test R²: 0.036121
+Overfitting: -0.071562
+
+KNN
+Train RMSE: 15.402538
+Test RMSE: 15.548188
+Train MAE: 12.107953
+Test MAE: 12.242098
+Train R²: 0.097150
+Test R²: 0.088937
+Overfitting: -0.145649
+
+MLP
+Train RMSE: 16.103687
+Test RMSE: 16.200261
+Train MAE: 12.962162
+Test MAE: 12.888772
+Train R²: 0.013081
+Test R²: 0.010916
+Overfitting: -0.096574
+
+BAGGING
+Train RMSE: 16.030201
+Test RMSE: 16.116506
+Train MAE: 12.611988
+Test MAE: 12.730160
+Train R²: 0.022067
+Test R²: 0.021117
+Overfitting: -0.086304
+
+VOTING
+Train RMSE: 9.123018
+Test RMSE: 9.214229
+Train MAE: 7.285965
+Test MAE: 7.357303
+Train R²: 0.683256
+Test R²: 0.680032
+Overfitting: -0.091211
+
+STACKING_LINEAR
+Train RMSE: 8.868496
+Test RMSE: 8.974305
+Train MAE: 7.062403
+Test MAE: 7.150821
+Train R²: 0.700683
+Test R²: 0.696478
+Overfitting: -0.105809
+
+STACKING_DIVERSE
+Train RMSE: 9.498264
+Test RMSE: 9.626528
+Train MAE: 7.602869
+Test MAE: 7.682292
+Train R²: 0.656664
+Test R²: 0.650756
+Overfitting: -0.128264
+
+
+OPTIMIZATION RESULTS
+--------------------
+
+RANDOMFOREST
+Best CV Score: 74.956835
+Test RMSE: 8.467644
+Test R²: 0.729782
+Best Parameters: {'n_estimators': 150, 'min_samples_split': 10, 'max_features': 0.5, 'max_depth': None}
+
+GRADIENTBOOSTING
+Best CV Score: 68.490776
+Test RMSE: 8.132742
+Test R²: 0.750734
+Best Parameters: {'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.2}
+
+XGBOOST
+Best CV Score: 69.188815
+Test RMSE: 8.140499
+Test R²: 0.750258
+Best Parameters: {'subsample': 0.8, 'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.2}
+
+
+ROBUSTNESS ANALYSIS
+--------------------
+Missing Values Handling: {'handled': True, 'best_strategy': 'mean', 'rmse_degradation': np.float64(0.26098369407035626), 'missing_percentage_tested': 15.0}
+Outlier Sensitivity: {'5.0%': np.float64(1.2767894894224412), '10.0%': np.float64(1.9076888407134742), '15.0%': np.float64(2.7682683662099468)}
+Noise Sensitivity: {'noise_0.01': np.float64(0.20564477236815826), 'noise_0.05': np.float64(0.2583192562104468), 'noise_0.1': np.float64(0.4380354509103537), 'noise_0.2': np.float64(0.8446293796742737)}

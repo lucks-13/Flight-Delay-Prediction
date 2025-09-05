@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detailed Analysis Report</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 40px; background-color: #f8f9fa; }
+        .container { max-width: 1200px; margin: 0 auto; background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #34495e; margin-top: 30px; }
+        .performance-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 20px 0; }
+        .metric-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 8px; text-align: center; }
+        .metric-value { font-size: 2em; font-weight: bold; }
+        .metric-label { font-size: 0.9em; opacity: 0.9; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        th { background: linear-gradient(135deg, #3498db, #2980b9); color: white; padding: 12px; }
+        td { padding: 10px; border-bottom: 1px solid #ecf0f1; }
+        tr:nth-child(even) { background-color: #f8f9fa; }
+        .highlight { background-color: #fff3cd; padding: 10px; border-radius: 5px; margin: 10px 0; }
+        .status-ready { color: #27ae60; font-weight: bold; }
+        .status-warning { color: #f39c12; font-weight: bold; }
+        .status-error { color: #e74c3c; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Flight Delay Prediction - Comprehensive Analysis</h1>
+
+        <div class="performance-grid">
+            <div class="metric-card">
+                <div class="metric-value">8.092</div>
+                <div class="metric-label">Best Test RMSE</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">0.753</div>
+                <div class="metric-label">Best Test R²</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">50.0</div>
+                <div class="metric-label">Deployment Score</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">15</div>
+                <div class="metric-label">Models Tested</div>
+            </div>
+        </div>
+
+        <h2>Model Performance Ranking</h2>
+        <table>
+            <tr><th>Rank</th><th>Model</th><th>Test RMSE</th><th>Test R²</th><th>Test MAE</th><th>Overfitting</th></tr>
+
+            <tr class="status-warning">
+                <td>1</td>
+                <td><strong>stacking_linear</strong></td>
+                <td>8.9743</td>
+                <td>0.6965</td>
+                <td>7.1508</td>
+                <td>-0.1058</td>
+            </tr>
+            <tr class="status-warning">
+                <td>2</td>
+                <td><strong>voting</strong></td>
+                <td>9.2142</td>
+                <td>0.6800</td>
+                <td>7.3573</td>
+                <td>-0.0912</td>
+            </tr>
+            <tr class="status-warning">
+                <td>3</td>
+                <td><strong>stacking_diverse</strong></td>
+                <td>9.6265</td>
+                <td>0.6508</td>
+                <td>7.6823</td>
+                <td>-0.1283</td>
+            </tr>
+            <tr class="status-error">
+                <td>4</td>
+                <td><strong>elastic_net</strong></td>
+                <td>15.0780</td>
+                <td>0.1432</td>
+                <td>11.9588</td>
+                <td>-0.3339</td>
+            </tr>
+            <tr class="status-error">
+                <td>5</td>
+                <td><strong>knn</strong></td>
+                <td>15.5482</td>
+                <td>0.0889</td>
+                <td>12.2421</td>
+                <td>-0.1456</td>
+            </tr>
+            <tr class="status-error">
+                <td>6</td>
+                <td><strong>svr</strong></td>
+                <td>15.9925</td>
+                <td>0.0361</td>
+                <td>12.7251</td>
+                <td>-0.0716</td>
+            </tr>
+            <tr class="status-error">
+                <td>7</td>
+                <td><strong>bagging</strong></td>
+                <td>16.1165</td>
+                <td>0.0211</td>
+                <td>12.7302</td>
+                <td>-0.0863</td>
+            </tr>
+            <tr class="status-error">
+                <td>8</td>
+                <td><strong>mlp</strong></td>
+                <td>16.2003</td>
+                <td>0.0109</td>
+                <td>12.8888</td>
+                <td>-0.0966</td>
+            </tr>
+            <tr class="status-error">
+                <td>9</td>
+                <td><strong>random_forest</strong></td>
+                <td>16.2608</td>
+                <td>0.0035</td>
+                <td>12.8028</td>
+                <td>-0.0831</td>
+            </tr>
+            <tr class="status-error">
+                <td>10</td>
+                <td><strong>ridge</strong></td>
+                <td>16.3096</td>
+                <td>-0.0025</td>
+                <td>12.8499</td>
+                <td>-0.3669</td>
+            </tr>
+            <tr class="status-error">
+                <td>11</td>
+                <td><strong>lasso</strong></td>
+                <td>16.4058</td>
+                <td>-0.0143</td>
+                <td>12.9863</td>
+                <td>-0.2964</td>
+            </tr>
+            <tr class="status-error">
+                <td>12</td>
+                <td><strong>ada_boost</strong></td>
+                <td>16.7258</td>
+                <td>-0.0543</td>
+                <td>13.1927</td>
+                <td>-0.0664</td>
+            </tr>
+            <tr class="status-error">
+                <td>13</td>
+                <td><strong>gradient_boosting</strong></td>
+                <td>17.7267</td>
+                <td>-0.1843</td>
+                <td>13.9818</td>
+                <td>-0.0854</td>
+            </tr>
+            <tr class="status-error">
+                <td>14</td>
+                <td><strong>decision_tree</strong></td>
+                <td>20.5242</td>
+                <td>-0.5875</td>
+                <td>16.3638</td>
+                <td>-0.1704</td>
+            </tr>
+            <tr class="status-error">
+                <td>15</td>
+                <td><strong>linear_regression</strong></td>
+                <td>26.8802</td>
+                <td>-1.7230</td>
+                <td>22.6332</td>
+                <td>-0.0411</td>
+            </tr>
+        </table>
+
+        <h2>Optimization Results</h2>
+        <table>
+            <tr><th>Model</th><th>Best CV Score</th><th>Test RMSE</th><th>Test R²</th><th>Key Parameters</th></tr>
+
+            <tr>
+                <td><strong>RandomForest</strong></td>
+                <td>74.9568</td>
+                <td>8.4676</td>
+                <td>0.7298</td>
+                <td>n_estimators=150, min_samples_split=10, max_features=0.5</td>
+            </tr>
+            <tr>
+                <td><strong>GradientBoosting</strong></td>
+                <td>68.4908</td>
+                <td>8.1327</td>
+                <td>0.7507</td>
+                <td>n_estimators=100, max_depth=3, learning_rate=0.2</td>
+            </tr>
+            <tr>
+                <td><strong>XGBoost</strong></td>
+                <td>69.1888</td>
+                <td>8.1405</td>
+                <td>0.7503</td>
+                <td>subsample=0.8, n_estimators=100, max_depth=3</td>
+            </tr>
+        </table>
+
+        <h2>Deployment Readiness</h2>
+        <div class="highlight">
+            <strong>Overall Status:</strong>
+            <span class="status-error">
+                50.0/100
+            </span>
+        </div>
+
+        <h3>Risk Assessment</h3>
+<h4 class='risk-medium'>MEDIUM RISKS</h4><ul><li class='risk-medium'>Large model size may impact deployment</li></ul><h4 class='risk-high'>HIGH RISKS</h4><ul><li class='risk-high'>High sensitivity to missing values</li><li class='risk-high'>High sensitivity to outliers</li></ul>
+        <h3>Recommendations</h3>
+        <ol>
+<li>Model needs improvements before production deployment</li><li>Implement robust preprocessing pipeline with advanced imputation</li><li>Add outlier detection and handling mechanisms</li><li>Add input normalization and noise filtering</li><li>Set up monitoring for prediction drift and model performance</li><li>Implement A/B testing framework for model updates</li><li>Create automated retraining pipeline with performance thresholds</li>
+        </ol>
+    </div>
+</body>
+</html>

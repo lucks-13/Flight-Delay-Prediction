@@ -1,0 +1,6 @@
+Preprocessing_Method,Best_CV_Score,Best_Model
+standard,206.9473208575678,ridge
+minmax,174.19548112438517,random_forest
+robust,137.58055906237306,ridge
+power,157.54860511283346,bagging
+quantile,193.96673532981657,ada_boost

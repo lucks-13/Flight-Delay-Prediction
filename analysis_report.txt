@@ -1,0 +1,365 @@
+FLIGHT DELAY PREDICTION ANALYSIS REPORT
+==================================================
+
+DATASET OVERVIEW
+--------------------
+Dataset Shape: (18971, 18)
+Memory Usage: 5.99 MB
+Columns: ['airline', 'origin', 'destination', 'scheduled_departure', 'distance', 'day_of_week', 'month', 'weather_delay', 'security_delay', 'aircraft_delay', 'late_aircraft_delay', 'air_traffic_delay', 'delay_minutes', 'is_weekend', 'is_holiday_season', 'departure_hour', 'is_peak_hour', 'route']
+Duplicate Rows: 0
+Numerical Columns: ['scheduled_departure', 'distance', 'day_of_week', 'month', 'weather_delay', 'security_delay', 'aircraft_delay', 'late_aircraft_delay', 'air_traffic_delay', 'delay_minutes', 'is_weekend', 'is_holiday_season', 'departure_hour', 'is_peak_hour']
+Categorical Columns: ['airline', 'origin', 'destination']
+
+DATA QUALITY SUMMARY
+-------------------------
+                    Data_Type  Missing_Count  Missing_Percentage  Unique_Values
+airline                object              0                 0.0             10
+origin                 object              0                 0.0             20
+destination            object              0                 0.0             20
+scheduled_departure     int64              0                 0.0           1800
+distance              float64              0                 0.0          18971
+day_of_week             int64              0                 0.0              7
+month                   int64              0                 0.0             12
+weather_delay         float64              0                 0.0          18971
+security_delay        float64              0                 0.0          18971
+aircraft_delay        float64              0                 0.0          18971
+late_aircraft_delay   float64              0                 0.0          18971
+air_traffic_delay     float64              0                 0.0          18971
+delay_minutes         float64              0                 0.0          18886
+is_weekend              int64              0                 0.0              2
+is_holiday_season       int64              0                 0.0              2
+departure_hour          int64              0                 0.0             18
+is_peak_hour            int64              0                 0.0              2
+
+STATISTICAL ANALYSIS SUMMARY
+------------------------------
+
+scheduled_departure:
+  Count: 18971
+  Mean: 1394.3877
+  Std: 521.1612
+  Median: 1392.0000
+  Min: 500.0000
+  Max: 2299.0000
+  Skewness: 0.0120
+  Kurtosis: -1.2099
+  Normal Distribution: False
+
+distance:
+  Count: 18971
+  Mean: 1000.9810
+  Std: 706.9138
+  Median: 844.6237
+  Min: 3.2189
+  Max: 6778.5531
+  Skewness: 1.4102
+  Kurtosis: 3.0380
+  Normal Distribution: False
+
+day_of_week:
+  Count: 18971
+  Mean: 3.9827
+  Std: 1.9983
+  Median: 4.0000
+  Min: 1.0000
+  Max: 7.0000
+  Skewness: 0.0087
+  Kurtosis: -1.2487
+  Normal Distribution: False
+
+month:
+  Count: 18971
+  Mean: 6.5079
+  Std: 3.4588
+  Median: 7.0000
+  Min: 1.0000
+  Max: 12.0000
+  Skewness: 0.0014
+  Kurtosis: -1.2127
+  Normal Distribution: False
+
+weather_delay:
+  Count: 18971
+  Mean: 5.1131
+  Std: 5.1118
+  Median: 3.5438
+  Min: 0.0001
+  Max: 57.2661
+  Skewness: 1.9972
+  Kurtosis: 5.9232
+  Normal Distribution: False
+
+security_delay:
+  Count: 18971
+  Mean: 2.0014
+  Std: 2.0011
+  Median: 1.3751
+  Min: 0.0000
+  Max: 18.1446
+  Skewness: 1.9748
+  Kurtosis: 5.5728
+  Normal Distribution: False
+
+aircraft_delay:
+  Count: 18971
+  Mean: 3.0191
+  Std: 3.0316
+  Median: 2.1026
+  Min: 0.0000
+  Max: 32.9442
+  Skewness: 2.0623
+  Kurtosis: 6.4161
+  Normal Distribution: False
+
+late_aircraft_delay:
+  Count: 18971
+  Mean: 3.9686
+  Std: 3.9517
+  Median: 2.7578
+  Min: 0.0002
+  Max: 42.8568
+  Skewness: 1.9598
+  Kurtosis: 5.9265
+  Normal Distribution: False
+
+air_traffic_delay:
+  Count: 18971
+  Mean: 3.0471
+  Std: 3.0402
+  Median: 2.1210
+  Min: 0.0000
+  Max: 32.3505
+  Skewness: 2.0226
+  Kurtosis: 6.2564
+  Normal Distribution: False
+
+delay_minutes:
+  Count: 18971
+  Mean: 36.4613
+  Std: 16.2264
+  Median: 35.3151
+  Min: 0.0000
+  Max: 112.1770
+  Skewness: 0.3762
+  Kurtosis: 0.0732
+  Normal Distribution: False
+
+is_weekend:
+  Count: 18971
+  Mean: 0.2816
+  Std: 0.4498
+  Median: 0.0000
+  Min: 0.0000
+  Max: 1.0000
+  Skewness: 0.9712
+  Kurtosis: -1.0568
+  Normal Distribution: False
+
+is_holiday_season:
+  Count: 18971
+  Mean: 0.3347
+  Std: 0.4719
+  Median: 0.0000
+  Min: 0.0000
+  Max: 1.0000
+  Skewness: 0.7005
+  Kurtosis: -1.5093
+  Normal Distribution: False
+
+departure_hour:
+  Count: 18971
+  Mean: 13.4496
+  Std: 5.2031
+  Median: 13.0000
+  Min: 5.0000
+  Max: 22.0000
+  Skewness: 0.0107
+  Kurtosis: -1.2166
+  Normal Distribution: False
+
+is_peak_hour:
+  Count: 18971
+  Mean: 0.2796
+  Std: 0.4488
+  Median: 0.0000
+  Min: 0.0000
+  Max: 1.0000
+  Skewness: 0.9823
+  Kurtosis: -1.0352
+  Normal Distribution: False
+
+
+MODEL PERFORMANCE COMPARISON
+-----------------------------------
+
+linear_regression:
+  Test RMSE: 26.880179
+  Test MAE: 22.633199
+  Test R²: -1.723035
+  Test MAPE: 1530748796.821623
+  Overfitting: -0.041125
+
+ridge:
+  Test RMSE: 16.309631
+  Test MAE: 12.849928
+  Test R²: -0.002484
+  Test MAPE: 992806469.681107
+  Overfitting: -0.366872
+
+lasso:
+  Test RMSE: 16.405844
+  Test MAE: 12.986322
+  Test R²: -0.014346
+  Test MAPE: 1031406031.534370
+  Overfitting: -0.296374
+
+elastic_net:
+  Test RMSE: 15.077966
+  Test MAE: 11.958839
+  Test R²: 0.143210
+  Test MAPE: 1014296600.271703
+  Overfitting: -0.333854
+
+decision_tree:
+  Test RMSE: 20.524213
+  Test MAE: 16.363768
+  Test R²: -0.587530
+  Test MAPE: 1079620214.554921
+  Overfitting: -0.170357
+
+random_forest:
+  Test RMSE: 16.260838
+  Test MAE: 12.802780
+  Test R²: 0.003506
+  Test MAPE: 1071225850.396259
+  Overfitting: -0.083112
+
+gradient_boosting:
+  Test RMSE: 17.726730
+  Test MAE: 13.981784
+  Test R²: -0.184258
+  Test MAPE: 1187125671.491343
+  Overfitting: -0.085387
+
+ada_boost:
+  Test RMSE: 16.725802
+  Test MAE: 13.192689
+  Test R²: -0.054297
+  Test MAPE: 1060561643.271167
+  Overfitting: -0.066429
+
+svr:
+  Test RMSE: 15.992516
+  Test MAE: 12.725113
+  Test R²: 0.036121
+  Test MAPE: 1267358420.433097
+  Overfitting: -0.071562
+
+knn:
+  Test RMSE: 15.548188
+  Test MAE: 12.242098
+  Test R²: 0.088937
+  Test MAPE: 927937979.844906
+  Overfitting: -0.145649
+
+mlp:
+  Test RMSE: 16.200261
+  Test MAE: 12.888772
+  Test R²: 0.010916
+  Test MAPE: 529286021.417050
+  Overfitting: -0.096574
+
+bagging:
+  Test RMSE: 16.116506
+  Test MAE: 12.730160
+  Test R²: 0.021117
+  Test MAPE: 1064485357.935658
+  Overfitting: -0.086304
+
+voting:
+  Test RMSE: 9.214229
+  Test MAE: 7.357303
+  Test R²: 0.680032
+  Test MAPE: 690235786.057359
+  Overfitting: -0.091211
+
+stacking_linear:
+  Test RMSE: 8.974305
+  Test MAE: 7.150821
+  Test R²: 0.696478
+  Test MAPE: 619739216.624456
+  Overfitting: -0.105809
+
+stacking_diverse:
+  Test RMSE: 9.626528
+  Test MAE: 7.682292
+  Test R²: 0.650756
+  Test MAPE: 672855624.447216
+  Overfitting: -0.128264
+
+
+BEST MODEL: stacking_linear
+--------------------
+Test RMSE: 8.974305
+Test R²: 0.696478
+Test MAE: 7.150821
+Test MAPE: 619739216.624456
+
+
+HYPERPARAMETER OPTIMIZATION RESULTS
+----------------------------------------
+
+RandomForest:
+  Best Parameters: {'n_estimators': 150, 'min_samples_split': 10, 'max_features': 0.5, 'max_depth': None}
+  CV Score: 74.956835
+  Test RMSE: 8.467644
+  Test R²: 0.729782
+
+GradientBoosting:
+  Best Parameters: {'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.2}
+  CV Score: 68.490776
+  Test RMSE: 8.132742
+  Test R²: 0.750734
+
+XGBoost:
+  Best Parameters: {'subsample': 0.8, 'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.2}
+  CV Score: 69.188815
+  Test RMSE: 8.140499
+  Test R²: 0.750258
+
+
+DEPLOYMENT READINESS ASSESSMENT
+----------------------------------------
+Readiness Score: 50.0/100
+Model Integrity: PASSED
+Model Size: 92.32 MB
+CV Stability Score: 0.9923
+
+Risk Assessment:
+  MEDIUM RISKS:
+    - Large model size may impact deployment
+  HIGH RISKS:
+    - High sensitivity to missing values
+    - High sensitivity to outliers
+
+Recommendations:
+  - Poor performance - revisit problem formulation and feature engineering
+  - High-dimensional feature space - consider dimensionality reduction
+  - Model needs improvements before production deployment
+  - Implement robust preprocessing pipeline with advanced imputation
+  - Add outlier detection and handling mechanisms
+  - Add input normalization and noise filtering
+  - Set up monitoring for prediction drift and model performance
+  - Implement A/B testing framework for model updates
+  - Create automated retraining pipeline with performance thresholds
+  - Complex ensemble model - implement SHAP or LIME for interpretability
+  - Implement model performance monitoring in production
+  - Set up data drift detection
+  - Establish model retraining schedule
+  - Create prediction confidence scoring system
+
+
+FINAL PERFORMANCE IMPROVEMENT
+-----------------------------------
+Performance Improvement: 66.61%
+Deployment Ready: False
